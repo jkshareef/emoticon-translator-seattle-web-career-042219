@@ -1,4 +1,5 @@
 # require modules here
+require 'pry'
 require 'yaml'
 
 
@@ -10,7 +11,9 @@ end
 
 def get_japanese_emoticon
   # code goes here
-  
+  library = load_library
+  binding.pry
+  library
 end
 
 def get_english_meaning
