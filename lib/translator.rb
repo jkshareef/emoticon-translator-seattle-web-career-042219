@@ -2,17 +2,18 @@
 require 'pry'
 require 'yaml'
 
-def load_library
+def load_library(file_path)
   # code goes here
-  library = YAML.load_file('emoticons.yml')
+  library = YAML.load_file(file_path)
+  binding.pry
   library
 end
 
-def get_japanese_emoticon(emoticon)
+def get_japanese_emoticon
   # code goes here
   library = load_library
   library.each do |name, array|
-    if array[0] == emoticon
+    
       return array[1]
     else
       nil
