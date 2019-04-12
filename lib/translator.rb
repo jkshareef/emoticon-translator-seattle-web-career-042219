@@ -5,7 +5,11 @@ require 'yaml'
 def load_library(file_path)
   # code goes here
   library = YAML.load_file(file_path)
-  library
+  new_hash = Hash["get_meaning" => {}, "get_emoticon" => {}]
+  library.each do |name, array|
+    new_hash["get_meaning"][array[1]] = name
+    new_hash["get_emoticon"][array[0]] = array[1]
+  end
 end
 
 def get_japanese_emoticon
