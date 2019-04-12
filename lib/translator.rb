@@ -15,8 +15,12 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   # code goes here
-  library = load_library(file_path)
-  binding.pry
+  lib = load_library(file_path)
+  lib.each do |top, info|
+    info.each do |jpn, desc|
+      if desc == "grinning"
+        return jpn
+  
 end
 
 def get_english_meaning
