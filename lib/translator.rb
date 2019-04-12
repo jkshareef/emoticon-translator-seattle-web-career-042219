@@ -1,8 +1,8 @@
 # require modules here
 require 'pry'
 require 'yaml'
+require_relative "emoticons.yml"
 
-puts emoticons.yml
 
 
 def load_library
