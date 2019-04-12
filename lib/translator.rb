@@ -2,7 +2,7 @@
 require 'pry'
 require 'yaml'
 
-
+puts emoticons.yml
 
 
 def load_library
